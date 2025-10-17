@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation — Manohar & Krishnaveni</title>
+<style>
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html, body{height:100%; width:100%; font-family:"Inter", sans-serif; overflow:hidden;}
+
+  /* --- FIRST PAGE --- */
+  #intro {
+    position:fixed; inset:0;
+    background: url("Vinayaka.jpg") no-repeat center center/cover;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    color:#fff; text-align:center; transition: opacity 1s ease; cursor:pointer; z-index:2;
+  }
+
+  marquee {
+    font-family:"Playfair Display", serif;
+    font-size:28px;
+    font-weight:700;
+    color:#ffeb3b;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    margin-bottom:20px;
+  }
+
+  #intro h1{
+    font-family:"Playfair Display", serif; font-size:36px;
+    margin-top:16px;
+    background: linear-gradient(45deg,#ff7e5f,#feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .intro-images{display:flex; gap:30px;}
+  .intro-images img{
+    width:160px; height:160px; border-radius:50%; object-fit:cover;
+    border:4px solid #fff; box-shadow:0 6px 20px rgba(0,0,0,0.3);
+  }
+  #intro p{margin-top:18px; font-size:16px; color:#fff; text-shadow:0 2px 6px rgba(0,0,0,0.3);}
+
+  /* --- SECOND PAGE --- */
+  #card {
+    opacity:0; transition: opacity 1s ease;
+    width:100%; height:100%; background:#fff8f2;
+    display:flex; align-items:center; justify-content:center; padding:28px; position:relative;
+  }
+  .invitation {
+    width:100%; max-width:780px;
+    background:#fff;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(58,40,30,0.08);
+    overflow:hidden;
+    display:grid; grid-template-columns:1fr 380px; gap:0;
+  }
+  .main { padding:44px; display:flex; flex-direction:column; justify-content:center; gap:18px; }
+  .logo { display:flex; gap:12px; align-items:center; }
+  .flower { width:56px; height:56px; border-radius:12px; background:linear-gradient(135deg,#fbe9e6,#fff0ee); display:flex; align-items:center; justify-content:center; font-family:"Playfair Display", serif; color:#b45f3c; font-weight:700; font-size:22px; box-shadow:0 6px 18px rgba(180,95,60,0.08); }
+  h1{margin:0; font-family:"Playfair Display", serif; font-size:38px; color:#b45f3c; letter-spacing:0.6px;}
+  .names{display:flex; gap:14px; align-items:baseline; flex-wrap:wrap;}
+  .names .title{font-size:14px; color:#7a6b66; text-transform:uppercase; letter-spacing:1px;}
+  .names .person{font-family:"Playfair Display", serif; font-size:28px; color:#1f1f1f; margin-right:6px;}
+  .details{margin-top:10px; padding-top:8px; border-top:1px dashed #f0e6e3; color:#7a6b66; font-size:15px; line-height:1.6;}
+  .cta{margin-top:20px; display:flex; gap:12px; align-items:center;}
+  .btn{background:#b45f3c; color:#fff; padding:10px 18px; border-radius:10px; text-decoration:none; font-weight:600; box-shadow:0 6px 16px rgba(180,95,60,0.12); display:inline-block;}
+  .btn.secondary{background:transparent; color:#b45f3c; border:1px solid #f1d2c9; padding:8px 14px; font-weight:600;}
+  .side { background: linear-gradient(180deg, rgba(180,95,60,0.06), rgba(180,95,60,0.02)); padding:28px; display:flex; flex-direction:column; justify-content:center; gap:12px; align-items:center; }
+  .venue { width:100%; border-radius:12px; overflow:hidden; box-shadow:0 6px 18px rgba(58,40,30,0.04); background:linear-gradient(180deg,#fff,#fff8f7); padding:18px; text-align:center;}
+  .venue h3 { margin:6px 0 0 0; font-family:"Playfair Display", serif; color:#b45f3c; font-size:20px;}
+  .venue p { margin:6px 0 0 0; color:#7a6b66; font-size:14px;}
+  .date-badge { margin-top:14px; background:#fff; padding:10px 14px; border-radius:10px; border:1px solid #fdeee9; font-weight:700; color:#b45f3c; letter-spacing:0.8px; box-shadow:0 8px 18px rgba(180,95,60,0.06);}
+  .footer-note{margin-top:12px; font-size:13px; color:#7a6b66; text-align:center;}
+
+  @media (max-width:880px){ .invitation { grid-template-columns:1fr; } .side { order:-1; padding:20px 20px 12px; } .main { padding:28px; } }
+</style>
+</head>
+<body>
+
+<!-- FIRST PAGE -->
+<div id="intro">
+  <marquee behavior="scroll" direction="left" scrollamount="6">Jangidi's Wedding Invitation</marquee>
+  <div class="intro-images">
+    <img src="Bride.jpg" alt="Bride">
+    <img src="BrideGroom.jpg" alt="Groom">
+  </div>
+  <h1>Manohar ❤ Krishnaveni</h1>
+  <p>Click anywhere to open invitation</p>
+</div>
+
+<!-- SECOND PAGE -->
+<div id="card">
+  <article class="invitation">
+    <section class="main">
+      <div class="logo" aria-hidden="true">
+        <div class="flower">❤</div>
+        <div>
+          <div style="font-size:13px; color:#7a6b66; font-weight:600;">With great joy</div>
+          <div style="font-size:12px; color:#b07a6b; margin-top:4px;">We invite you to celebrate</div>
+        </div>
+      </div>
+
+      <h1>Wedding Celebration</h1>
+
+      <div class="names" aria-live="polite">
+        <div>
+          <div class="title">Bride</div>
+          <div class="person">Manohar</div>
+        </div>
+        <div>
+          <div class="title">Groom</div>
+          <div class="person">Krishnaveni</div>
+        </div>
+      </div>
+
+      <p class="details">
+        Together with their families, the couple request the pleasure of your company 
+        to celebrate their union. Your blessings are cherished on this special day.
+      </p>
+
+      <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:8px;">
+        <div style="font-size:14px; color:#7a6b66;"><strong>Venue:</strong> Thurupu Rompidodla</div>
+        <div style="font-size:14px; color:#7a6b66;"><strong>Date:</strong> 31/10/2025</div>
+      </div>
+
+      <div class="cta">
+        <a class="btn" href="#" onclick="window.print();return false;">Print Invitation</a>
+        <a class="btn secondary" href="https://maps.app.goo.gl/7B4o3fkPKsF4WyUF6" target="_blank">Get Directions</a>
+      </div>
+
+      <div class="footer-note">
+        Organizers: JANGIDI MALLESWARAO & Smt.TIRUPATHAMMA & JANGIDI MAHESH & Smt. RENUKA<br/>
+        Mobile: 8074153693
+      </div>
+    </section>
+
+    <aside class="side">
+      <div class="venue">
+        <h3>Thurupu Rompidodla</h3>
+        <p>Join us for the ceremony and the celebration afterwards.</p>
+        <div class="date-badge">31 / 10 / 2025</div>
+      </div>
+    </aside>
+  </article>
+</div>
+
+<script>
+  const intro = document.getElementById('intro');
+  const card = document.getElementById('card');
+
+  intro.addEventListener('click', ()=>{
+    intro.style.opacity='0';
+    setTimeout(()=>{
+      intro.style.display='none';
+      card.style.opacity='1';
+    },800);
+  });
+</script>
+
+</body>
+</html>
